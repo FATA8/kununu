@@ -1,5 +1,5 @@
 import React from "react";
-import {getOldCity, getNewList} from "../utils/api.js";
+import {getOldCity} from "../utils/api.js";
 import Autocomplete from "react-autocomplete"
 import "../css/Combobox.sass";
 

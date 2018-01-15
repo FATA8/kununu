@@ -1,5 +1,6 @@
 import React from "react";
 import Combobox from "./Combobox";
+import "../css/ListItem.sass";
 
 class ListItem extends React.Component {
 
@@ -46,7 +47,7 @@ class ListItem extends React.Component {
                 <div className="oldCity">
                     <Combobox index={this.props.i} onUpdateItem={this.onUpdateItem} showLoading={this.showLoading}/>
 
-                    <img src={"img/loading.gif"} style={this.state.loading ? {visibility: "visible"} : {visibility: "hidden"}}/>
+                    <img src={"img/loading.gif"} style={this.state.loading ? {visibility: "visible"} : {visibility: "hidden"}} alt="Loading..." />
 
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.state.oldId}</div>
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.state.oldArea}</div>

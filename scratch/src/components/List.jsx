@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import ListItem from "./ListItem";
-import "../css/List.sass";
+import "../sass/List.sass";
 
 class List extends React.Component {
 

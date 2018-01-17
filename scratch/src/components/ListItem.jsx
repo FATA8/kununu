@@ -1,6 +1,6 @@
 import React from "react";
 import Combobox from "./Combobox";
-import "../css/ListItem.sass";
+import "../sass/ListItem.sass";
 
 class ListItem extends React.Component {
 

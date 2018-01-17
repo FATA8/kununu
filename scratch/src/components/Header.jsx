@@ -1,10 +1,12 @@
 import React from "react";
-import "../css/Header.sass";
+import "../sass/Header.sass";
 
 // Stateless Component
 const Header = (props) => {
     return (
-        <h1>{props.homeLink}</h1>
+        <li className="item">
+            <h1>{props.homeLink}</h1>
+        </li>
     );
 };
 

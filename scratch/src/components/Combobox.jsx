@@ -1,7 +1,7 @@
 import React from "react";
 import {getOldCity} from "../utils/api.js";
 import Autocomplete from "react-autocomplete"
-import "../css/Combobox.sass";
+import "../sass/Combobox.sass";
 
 class Combobox extends React.Component {
     constructor() {
@@ -50,7 +50,7 @@ class Combobox extends React.Component {
                          key={item.abbr}
                     >{item.name}</div>
                 )}
-                
+
             />
 
         )

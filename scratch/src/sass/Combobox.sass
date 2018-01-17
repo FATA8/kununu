@@ -1,50 +1,7 @@
-li.item
-  width: calc(100% - 60px)
-  margin: 0
-  padding-top: 5px
-  padding-right: 30px
-  padding-left: 30px
-  padding-bottom: 5px
-  background-color: rgb(250, 251, 254)
-  border-top: 2px solid rgb(253,254,255)
-  border-bottom: 1px solid rgb(221, 221, 221)
-  border-left: 5px solid transparent
-  position: relative
-  -webkit-column-break-inside: avoid
-  page-break-inside: avoid
-  break-inside: avoid-column
-  display: block
-  box-shadow: 10px 10px rgb(67, 72, 88)
-  /*margin-bottom: 40px;*/
-  line-height: 80px
-
-
-li.item-selected
-  color: #fff
-  background-color: rgb(32, 196, 200)
-  border-left: 5px solid rgb(29, 173, 177)
-  border-top: 2px solid rgb(44, 251, 255)
-  border-bottom: 1px solid rgb(23, 142, 145)
-  line-height: 40px
-
-li.item > div:first-child
-  width: 50%
-  display: inline-block
-  vertical-align: middle
-
-
-li.item > div:last-child
-  width: 50%
-  display: inline-block
-  vertical-align: middle
-
-
-/*****/
 div.oldCity > div
   width: 100%
 
-
-/* Triangle at right in Input */
+/* Triangle at right in <Input> */
 div.oldCity > div:first-child:after
   content: ""
   position: absolute
@@ -59,7 +16,6 @@ div.oldCity > div:first-child:after
   border-right: 5px solid transparent
   border-top: 5px solid rgb(80, 85, 102)
 
-
 input
   display: block
   float: left
@@ -73,27 +29,26 @@ input
   background-clip: padding-box
   border: 1px solid rgba(0, 0, 0, .15)
   border-radius: 0
-  width: calc(100% - 22px) /* 100% - padding - border */
+  width: calc(100% - 22px)
+  /* 100% - padding - border */
   font-size: 20px
-
 
 .menu
   position: absolute
   box-sizing: border-box
   width: 100%
   border: 1px solid #cccccc
-  box-shadow: 0 14px 13px rgba(0,0,0,0.4),  0 18px 23px rgba(0,0,0,0.1),  0 28px 33px rgba(0,0,0,0.1)
+  box-shadow: 0 14px 13px rgba(0, 0, 0, 0.4), 0 18px 23px rgba(0, 0, 0, 0.1), 0 28px 33px rgba(0, 0, 0, 0.1)
   z-index: 100000
   background-color: #fff
-  margin-top: 39px /* input height = 10(padding) + 14(font) + 2(border) - 1 for overlap*/
+  margin-top: 39px
+  /* input height = 10(padding) + 14(font) + 2(border) - 1 for overlap*/
   max-height: 50vh
   overflow: auto
   line-height: 40px
 
-
 .menu:empty
   display: none
-
 
 .item
   /*transition: all 0.3s ease;*/
@@ -102,19 +57,17 @@ input
   cursor: pointer
   border-left: 5px solid transparent
 
-
 .item-highlighted
   color: #fff
   background-color: rgb(32, 196, 200)
   border-left: 5px solid rgb(29, 173, 177)
-
 
 .item-header
   background-color: #eeeeee
   color: #454545
   font-weight: bold
 
-
+/* loading indicator ... */
 div.oldCity > img
   width: 30px
   position: fixed

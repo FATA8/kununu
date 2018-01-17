@@ -5,7 +5,7 @@ import {Provider} from "react-redux";
 import App from "./components/App.jsx";
 import "./utils/api.js";
 
-import "./css/App.sass";
+import "./sass/App.sass";
 
 import {createStore, combineReducers, applyMiddleware} from "redux";
 import {createLogger} from "redux-logger";

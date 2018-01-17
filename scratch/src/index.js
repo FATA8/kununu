@@ -5,7 +5,6 @@ import {Provider} from "react-redux";
 import App from "./components/App.js";
 import "./utils/api.js";
 
-import "./css/fonts.css";
 import "./css/App.sass";
 
 import {createStore, combineReducers, applyMiddleware} from "redux";

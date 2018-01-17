@@ -8,7 +8,7 @@ class List extends React.Component {
     render() {
         return (
             <ul className="list">
-                <Header homeLink="Kununu Frontend Task"/>
+                <Header homeLink={this.props.header} />
 
 
                 {!this.props.cities.length && <React.Fragment><Header homeLink={"Loading List..."}/><img src={"img/loading.gif"} alt="Loading..." /></React.Fragment>}

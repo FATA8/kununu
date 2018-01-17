@@ -4,8 +4,8 @@ import "../sass/Header.sass";
 // Stateless Component
 const Header = (props) => {
     return (
-        <li className="item">
-            <h1>{props.homeLink}</h1>
+        <li className="list__item">
+            <h1 className="list__item__header">{props.headerText}</h1>
         </li>
     );
 };

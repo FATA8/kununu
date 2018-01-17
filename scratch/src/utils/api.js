@@ -2,7 +2,7 @@ const axios = require('axios');
 
 //axios.defaults.baseURL = 'http://localhost:8080/';
 
-const compare = function(a, b) {
+const compare = function (a, b) {
 
     if (a.name < b.name) {
         return -1;
@@ -24,7 +24,11 @@ let api = {
                 return response;
             })
             .catch(function (error) {
-                console.error(error);
+                console.error("getNewList error", error);
+                console.log("returning empty data");
+                return {
+                    data: []
+                };
             });
     },
 
@@ -42,7 +46,7 @@ let api = {
                 .catch(function (error) {
                     // if you try to search "*", "?" it will throw error 500
                     // if you try to search "#", " " it will throw error 400
-                    console.error(error);
+                    console.error("getOldCity error", error);
                     //window.alert ("getOldCity error:\n" + error);
                     return {
                         data: []

@@ -18,7 +18,7 @@ class Combobox extends React.Component {
         return (
 
             <Autocomplete
-                //inputProps={{id: 'states-autocomplete'}}
+                inputProps={{className: 'combobox__input'}}
                 wrapperStyle={{position: 'relative', display: 'inline-block'}}
                 value={this.state.inpt}
                 items={this.state.cities}
@@ -33,21 +33,21 @@ class Combobox extends React.Component {
                 onChange={this.onChange}
 
                 renderMenu={(items, value) => (
-                    <div className="menu">
+                    <div className="combobox__list">
                         {value === '' ? (
-                            <div className="item">Type an address</div>
+                            <div className="combobox__list__item">Type an address</div>
                         ) : this.state.loading ? (
-                            <div className="item">Loading...</div>
+                            <div className="combobox__list__item">Loading...</div>
                         ) : items.length === 0 ? (
-                            <div className="item">No matches for {value}</div>
+                            <div className="combobox__list__item">No matches for {value}</div>
                         ) : this.renderItems(items)}
                     </div>
                 )}
 
                 renderItem={(item, isHighlighted) => (
                     <div
-                        className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
-                         key={item.abbr}
+                        className={`combobox__list__item ${isHighlighted ? 'combobox__list__item--highlighted' : ''}`}
+                        key={item.abbr}
                     >{item.name}</div>
                 )}
 
@@ -61,7 +61,7 @@ class Combobox extends React.Component {
         return items.map((item, index) => {
             const text = item.props.children;
             if (index === 0 || items[index - 1].props.children.charAt(0) !== text.charAt(0)) {
-                return [<div className="item item-header">{text.charAt(0)}</div>, item]
+                return [<div className="combobox__list__item combobox__list__item__header">{text.charAt(0)}</div>, item]
             }
             else {
                 return item
@@ -78,7 +78,7 @@ class Combobox extends React.Component {
         this.props.showLoading(true);
 
         getOldCity(event.target.value).then(function (res) { // todo arrow
-            console.log("vratil sa z api promise ->");
+            console.log("returned API Promise ->");
             console.log(res);
             that.props.showLoading(false);
             that.setState({cities: res.data});

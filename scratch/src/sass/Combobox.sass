@@ -16,7 +16,7 @@ div.oldCity > div:first-child:after
   border-right: 5px solid transparent
   border-top: 5px solid rgb(80, 85, 102)
 
-input
+.combobox__input
   display: block
   float: left
   min-width: 160px
@@ -30,10 +30,9 @@ input
   border: 1px solid rgba(0, 0, 0, .15)
   border-radius: 0
   width: calc(100% - 22px)
-  /* 100% - padding - border */
   font-size: 20px
 
-.menu
+.combobox__list
   position: absolute
   box-sizing: border-box
   width: 100%
@@ -47,22 +46,22 @@ input
   overflow: auto
   line-height: 40px
 
-.menu:empty
+.combobox__list:empty
   display: none
 
-.item
-  /*transition: all 0.3s ease;*/
+.combobox__list__item
+  transition: all 0.3s ease
   color: rgb(80, 85, 102)
   padding: 10px 8px
   cursor: pointer
   border-left: 5px solid transparent
 
-.item-highlighted
+.combobox__list__item--highlighted
   color: #fff
   background-color: rgb(32, 196, 200)
   border-left: 5px solid rgb(29, 173, 177)
 
-.item-header
+.combobox__list__item__header
   background-color: #eeeeee
   color: #454545
   font-weight: bold

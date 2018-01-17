@@ -54,7 +54,7 @@ store.subscribe(() => {
 
 store.dispatch({
     type: "UPDATE",
-    payload: "loading..."
+    payload: "Loading..."
 });
 
 

@@ -1,11 +1,11 @@
-li.item
+.list__item
   margin: 15px
   padding-top: 5px
   padding-right: 30px
   padding-left: 30px
   padding-bottom: 5px
   background-color: rgb(250, 251, 254)
-  border-top: 2px solid rgb(253,254,255)
+  border-top: 2px solid rgb(253, 254, 255)
   border-bottom: 1px solid rgb(221, 221, 221)
   border-left: 5px solid transparent
   position: relative
@@ -14,13 +14,12 @@ li.item
   break-inside: avoid-column
   display: block
   box-shadow: 10px 10px rgb(67, 72, 88)
-  /*margin-bottom: 40px;*/
-  line-height: 80px
+  line-height: 40px
   min-width: 500px
   height: 130px
   justify-content: center
 
-li.item-selected
+.list__item--selected
   color: #fff
   background-color: rgb(32, 196, 200)
   border-left: 5px solid rgb(29, 173, 177)
@@ -28,13 +27,20 @@ li.item-selected
   border-bottom: 1px solid rgb(23, 142, 145)
   line-height: 40px
 
-li.item > div:first-child
+.list__item__column
   width: 50%
   display: inline-block
   vertical-align: middle
+  position: relative
 
+.list__item__number
+  color: rgb(240,243,245)
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5)
+  position: absolute
+  top: 70px
+  left: 20px
+  font-size: 100px
 
-li.item > div:last-child
-  width: 50%
-  display: inline-block
-  vertical-align: middle
+.list__item--selected .list__item__number
+  color: rgb(20, 188, 190)
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.2)

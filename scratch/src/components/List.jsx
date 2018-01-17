@@ -8,13 +8,13 @@ class List extends React.Component {
     render() {
         return (
             <ul className="list">
-                <Header homeLink={this.props.header} />
+                <Header headerText={this.props.header} />
 
 
-                {!this.props.cities.length && <React.Fragment><Header homeLink={"Loading List..."}/><img src={"img/loading.gif"} alt="Loading..." /></React.Fragment>}
+                {!this.props.cities.length && <React.Fragment><Header headerText={"Loading List..."}/><img src={"img/loading.gif"} alt="Loading..." /></React.Fragment>}
 
                 {this.props.cities.map((city, i) =>
-                    <ListItem key={i}
+                    <ListItem key={i} index={i}
                               city={city}/>
                 )}
             </ul>

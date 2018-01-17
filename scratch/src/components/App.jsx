@@ -29,8 +29,15 @@ class App extends Component {
         api.getNewList()
             .then(function (res) {
                     //console.log(res);
-                    that.setState({cities: res.data});
+
+
+                if (res.data.length) {
                     that.onHeaderUpdate("Welcome");
+                    that.setState({cities: res.data});
+                } else {
+                    that.onHeaderUpdate("Server did not send data!");
+                }
+
                 }
             )
             .catch(function (error) {

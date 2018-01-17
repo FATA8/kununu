@@ -32,26 +32,29 @@ class ListItem extends React.Component {
     }
 
     render() {
-        let cls = this.state.highlighted ? "item item-selected" : "item";
+        let cls = this.state.highlighted ? "list__item list__item--selected" : "list__item";
 
         return (
             <li className={cls}>
-                <div>
+                <span className={"list__item__number"}>{this.props.index + 1}</span>
+
+                <div className={"list__item__column"}>
                     <div style={this.state.highlighted ? {fontWeight: 700} : {fontWeight: 400}}>{this.props.city.name}</div>
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.props.city.id}</div>
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.props.city.admin_area}</div>
-
-
-
                 </div>
-                <div className="oldCity">
-                    <Combobox index={this.props.i} onUpdateItem={this.onUpdateItem} showLoading={this.showLoading}/>
 
-                    <img src={"img/loading.gif"} style={this.state.loading ? {visibility: "visible"} : {visibility: "hidden"}} alt="Loading..." />
+                <div className="list__item__column oldCity">
+                    <Combobox onUpdateItem={this.onUpdateItem} showLoading={this.showLoading}/>
+
+                    <img src={"img/loading.gif"}
+                         style={this.state.loading ? {visibility: "visible"} : {visibility: "hidden"}}
+                         alt="Loading..."/>
 
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.state.oldId}</div>
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.state.oldArea}</div>
                 </div>
+
             </li>
         )
     }

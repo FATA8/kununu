@@ -2,7 +2,7 @@
   "name": "kununu",
   "version": "1.0.0",
   "description": "kununu reactJS task by Martin Cibula",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",

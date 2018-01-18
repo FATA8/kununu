@@ -86,8 +86,8 @@ class Combobox extends React.Component {
             that.props.showLoading(false);
             that.setState({cities: res.data});
         });
-
     }
+
 }
 
 export default Combobox;

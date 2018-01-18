@@ -12,7 +12,7 @@ import {createLogger} from "redux-logger";
 
 
 const initialState = {
-    value: ["starting..."]
+    value: ["Starting..."]
 };
 
 const headerReducer = (state = initialState, action) => {
@@ -56,7 +56,6 @@ store.dispatch({
     type: "UPDATE",
     payload: "Loading..."
 });
-
 
 
 //render(<App />, document.getElementById('app'));

@@ -4,14 +4,9 @@ import {connect} from "react-redux";
 import List from "./List";
 import api from "../utils/api.js";
 
-// The interface should be made up of two columns.
-// The left side should show the geographical data,
-// the right side returns results from our historical old data.
-
-
 class App extends Component {
-    constructor(props) {
-        super(); // execute parent constructor since I inheriting from React.component
+    constructor() {
+        super();
         this.state = {
             cities: []
         };
@@ -58,15 +53,14 @@ class App extends Component {
     }
 }
 
-// which properties of the global state do I want to use in this component and
-// which local properties (accesible trought props keyword) do I want to map in my component
+
 const mapStateToProps = (state) => {
     return {
         header: state.header // reducer
     };
 };
 
-// for the actions I want to execute/send to my reducer(s)
+
 const mapDispatchToProps = (dispatch) => {
     return {
         setHeader: (headerText) => {

@@ -27,10 +27,9 @@ class ListItem extends React.Component {
     onUpdateItem(highlighted, oldId, oldArea) {
         console.log(this.props.city);
         this.setState({
-            // homeMounted: !this.state.homeMounted
-            highlighted: highlighted,
-            oldId: oldId,
-            oldArea: oldArea
+            highlighted,
+            oldId,
+            oldArea
         });
     }
 
@@ -67,5 +66,5 @@ class ListItem extends React.Component {
 export default ListItem;
 
 ListItem.propTypes = {
-  city: PropTypes.object.isRequired
+    city: PropTypes.object.isRequired
 };

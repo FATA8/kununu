@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import "../sass/Header.sass";
 
 // Stateless Component
@@ -11,3 +13,7 @@ const Header = (props) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+    headerText: PropTypes.string
+};

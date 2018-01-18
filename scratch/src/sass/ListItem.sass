@@ -1,9 +1,9 @@
+// Utilities
+@import "utilities/variables.sass"
+
 .list__item
   margin: 15px
-  padding-top: 5px
-  padding-right: 30px
-  padding-left: 30px
-  padding-bottom: 5px
+  padding: 5px 30px
   background-color: rgb(250, 251, 254)
   border-top: 2px solid rgb(253, 254, 255)
   border-bottom: 1px solid rgb(221, 221, 221)
@@ -21,8 +21,8 @@
 
 .list__item--selected
   color: #fff
-  background-color: rgb(32, 196, 200)
-  border-left: 5px solid rgb(29, 173, 177)
+  background-color: $highlighted-background
+  border-left: 5px solid $highlighted-border
   border-top: 2px solid rgb(44, 251, 255)
   border-bottom: 1px solid rgb(23, 142, 145)
   line-height: 40px
@@ -34,8 +34,8 @@
   position: relative
 
 .list__item__number
-  color: rgb(240,243,245)
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.5)
+  color: rgb(240, 243, 245)
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5)
   position: absolute
   top: 70px
   left: 20px
@@ -43,4 +43,4 @@
 
 .list__item--selected .list__item__number
   color: rgb(20, 188, 190)
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.2)
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2)

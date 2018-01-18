@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import Combobox from "./Combobox";
 import "../sass/ListItem.sass";
 
@@ -23,6 +25,7 @@ class ListItem extends React.Component {
 
 
     onUpdateItem(highlighted, oldId, oldArea) {
+        console.log(this.props.city);
         this.setState({
             // homeMounted: !this.state.homeMounted
             highlighted: highlighted,
@@ -44,12 +47,13 @@ class ListItem extends React.Component {
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.props.city.admin_area}</div>
                 </div>
 
-                <div className="list__item__column oldCity">
+                <div className="list__item__column list__item__column--oldCity">
                     <Combobox onUpdateItem={this.onUpdateItem} showLoading={this.showLoading}/>
 
                     <img src={"img/loading.gif"}
                          style={this.state.loading ? {visibility: "visible"} : {visibility: "hidden"}}
-                         alt="Loading..."/>
+                         className={"loadingIndicator"}
+                         alt="..."/>
 
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.state.oldId}</div>
                     <div style={this.state.highlighted ? {display: "block"} : {display: "none"}}>{this.state.oldArea}</div>
@@ -62,7 +66,6 @@ class ListItem extends React.Component {
 
 export default ListItem;
 
-/*List.propTypes = {
-  cities: React.PropTypes.object
-};*/
-
+ListItem.propTypes = {
+  city: PropTypes.object.isRequired
+};

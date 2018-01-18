@@ -26,22 +26,20 @@ class App extends Component {
 
     loadCities() {
         let that = this;
+        // load list of new cities with AJAX
         api.getNewList()
             .then(function (res) {
-                    //console.log(res);
-
-
-                if (res.data.length) {
-                    that.onHeaderUpdate("Welcome");
-                    that.setState({cities: res.data});
-                } else {
-                    that.onHeaderUpdate("Server did not send data!");
-                }
-
+                    if (res.data.length) {
+                        that.onHeaderUpdate("Welcome");
+                        that.setState({cities: res.data});
+                    } else {
+                        // reducer
+                        that.onHeaderUpdate("Server did not send data!");
+                    }
                 }
             )
             .catch(function (error) {
-                window.alert("Sorry, there was a loading error:\n" + error);
+                window.alert("Sorry, there was a loading error:\n\n" + error);
                 that.onHeaderUpdate("loading ERROR");
             });
     }
@@ -53,7 +51,8 @@ class App extends Component {
     render() {
         return (
             <div className="container">
-                <List cities={this.state.cities} header={this.props.header.value[this.props.header.value.length - 1]}/>
+                <List cities={this.state.cities}
+                      header={this.props.header.value[this.props.header.value.length - 1]}/>
             </div>
         );
     }

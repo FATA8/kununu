@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import Header from "./Header";
 import ListItem from "./ListItem";
 import "../sass/List.sass";
@@ -14,7 +16,8 @@ class List extends React.Component {
                 {!this.props.cities.length && <React.Fragment><Header headerText={"Loading List..."}/><img src={"img/loading.gif"} alt="Loading..." /></React.Fragment>}
 
                 {this.props.cities.map((city, i) =>
-                    <ListItem key={i} index={i}
+                    <ListItem key={i}
+                              index={i}
                               city={city}/>
                 )}
             </ul>
@@ -24,7 +27,7 @@ class List extends React.Component {
 
 export default List;
 
-/*List.propTypes = {
-  cities: React.PropTypes.object
-};*/
+List.propTypes = {
+  cities: PropTypes.array.isRequired
+};
 

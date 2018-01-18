@@ -1,8 +1,12 @@
-div.oldCity > div
+// Utilities
+@import "utilities/variables.sass"
+
+/* not very BEM like */
+.list__item__column--oldCity > div
   width: 100%
 
 /* Triangle at right in <Input> */
-div.oldCity > div:first-child:after
+.list__item__column--oldCity > div:first-child:after
   content: ""
   position: absolute
   top: 0
@@ -51,23 +55,22 @@ div.oldCity > div:first-child:after
 
 .combobox__list__item
   transition: all 0.3s ease
-  color: rgb(80, 85, 102)
+  color: $text-color
   padding: 10px 8px
   cursor: pointer
   border-left: 5px solid transparent
 
 .combobox__list__item--highlighted
   color: #fff
-  background-color: rgb(32, 196, 200)
-  border-left: 5px solid rgb(29, 173, 177)
+  background-color: $highlighted-background
+  border-left: 5px solid $highlighted-border
 
 .combobox__list__item__header
   background-color: #eeeeee
   color: #454545
   font-weight: bold
 
-/* loading indicator ... */
-div.oldCity > img
+.loadingIndicator
   width: 30px
   position: fixed
   margin-left: -60px

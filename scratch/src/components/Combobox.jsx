@@ -5,8 +5,8 @@ import Autocomplete from "react-autocomplete"
 import "../sass/Combobox.sass";
 
 class Combobox extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.onChange = this.onChange.bind(this);
         this.state = {
             inpt: "",

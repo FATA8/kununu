@@ -49,7 +49,7 @@ const store = createStore(
 ); // reducer is responsible for changing the state
 
 store.subscribe(() => {
-    console.log("Store updated! state =", store.getState());
+    // console.log("Store updated! state =", store.getState());
 });
 
 store.dispatch({

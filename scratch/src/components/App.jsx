@@ -5,8 +5,8 @@ import List from "./List";
 import api from "../utils/api.js";
 
 class App extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             cities: []
         };

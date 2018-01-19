@@ -6,8 +6,8 @@ import "../sass/ListItem.sass";
 
 class ListItem extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.onUpdateItem = this.onUpdateItem.bind(this);
         this.showLoading = this.showLoading.bind(this);
 
